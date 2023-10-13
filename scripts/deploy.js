@@ -18,7 +18,7 @@ async function main() {
 
   //Deploy Contract
   const ETHDaddy = await ethers.getContractFactory("ETHDaddy");
-  const ethDaddy = await ETHDaddy.deloy(NAME, SYMBOL);
+  const ethDaddy = await ETHDaddy.deploy(NAME, SYMBOL);
   await ethDaddy.deployed();
 
   console.log(`Deployed Domain Contract at: ${ethDaddy.address}\n`);
